@@ -3,6 +3,7 @@
 
 <head>
   <#include "_head.ftl">
+  <title>Java DemoApp: Home</title>
 </head>
 
 <body>
