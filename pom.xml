@@ -8,14 +8,16 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>java-demoapp</groupId>
 	<artifactId>java-demoapp</artifactId>
-	<version>0.0.1</version>
+	<version>${app.version}</version>
 	<name>java-demoapp</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>
+		<app.version>0.0.1</app.version>
 	</properties>
 
 	<dependencies>
