@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Java DemoApp
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+    settings:
+      template_exception_handler: rethrow
+
+server:
+  port: ${PORT:8080}
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: "/dev"
+      prefix: stdout
+      buffered: false
+      suffix:
+      file-date-format:
+      pattern: "%t %m %s %U %Dms %Bb"
+  error:
+    whitelabel:
+      enabled: false
+
+azure:
+  activedirectory:
+    active-directory-groups: Users

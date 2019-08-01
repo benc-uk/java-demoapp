@@ -3,14 +3,15 @@
 #
 FROM openjdk:11-jdk-slim-buster AS build
 
-ARG APP_VERSION=3.5.6
+ARG APP_VERSION=0.0.1
 
 WORKDIR /build 
 COPY .mvn ./.mvn
 COPY mvnw ./mvnw
 COPY pom.xml .
 COPY src ./src
-RUN ./mvnw clean package -Dapp.version=$APP_VERSION
+
+RUN ./mvnw -ntp clean package -Dapp.version=$APP_VERSION -DskipTests -Dmaven.test.skip=true
 RUN mv target/java-demoapp-${APP_VERSION}.jar target/java-demoapp.jar
 
 #

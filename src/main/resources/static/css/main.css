@@ -1,0 +1,31 @@
+body, .btn {
+  font-size: 110% !important; 
+}
+
+.card-header {
+  font-size: 120%;
+}
+
+.index-head {
+  margin-top: -20px; 
+  border-radius: 6px; 
+  padding: 15px;
+  background-color: #444;
+  color: #ddd;
+}
+
+.envtable {
+  max-height: 500px;
+  overflow-y: scroll;
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+  background-color:#222222;
+}
+
+.envtable td {
+  color: #ccc;
+}
+
+.envvars {
+  word-break: break-all;
+  color:#45da59 !important;
+}
