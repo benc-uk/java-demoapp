@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>java-demoapp</groupId>
+	<groupId>io.benco</groupId>
 	<artifactId>java-demoapp</artifactId>
 	<version>${app.version}</version>
 	<name>java-demoapp</name>

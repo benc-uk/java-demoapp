@@ -8,6 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarColor01">
     <a class="btn btn-success" role="button" href="/info"><i class="fas fa-info-circle"></i>&nbsp;Info</a> &nbsp;
     <a class="btn btn-success" role="button" href="/tools"><i class="fas fa-tools"></i>&nbsp; Tools</a>  &nbsp;
+    <a class="btn btn-success" role="button" href="/mbeans"><i class="fas fa-flask"></i>&nbsp; mBeans</a>  &nbsp;
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="btn btn-info" href="/user"><i class="fas fa-user"></i>&nbsp; User</a>
