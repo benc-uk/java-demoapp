@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: aks-javademo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aks-javademo 
+    spec:
+      containers:
+        - name: aks-javademo 
+          image: bcdemo.azurecr.io/aks-javademo 
+          ports:
+          - containerPort: 8080
