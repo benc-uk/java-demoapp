@@ -7,3 +7,5 @@ replicaCount: 1
 
 service:
   targetPort: 8080
+
+resources: {}
