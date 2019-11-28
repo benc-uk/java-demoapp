@@ -7,11 +7,3 @@ replicaCount: 1
 
 service:
   targetPort: 8080
-
-resources:
-  limits:
-    cpu: 300m
-    memory: 1G
-  requests:
-    cpu: 200m
-    memory: 256Mi
