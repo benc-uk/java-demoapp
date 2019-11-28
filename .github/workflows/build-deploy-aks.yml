@@ -81,11 +81,11 @@ jobs:
         username: ${{ env.acrName }}
         password: ${{ secrets.acrPassword }}  
 
-    - name: Helm install VueGo-Demoapp
+    - name: Helm install Java-Demoapp
       uses: deliverybot/helm@v1
       with:
         helm: helm3
-        release: vuego
+        release: java
         namespace: demoapps
         chart: https://code.benco.io/helm-charts/webapp-1.1.0.tgz
         value-files: ./kubernetes/app.yaml
