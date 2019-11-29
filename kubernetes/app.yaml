@@ -1,9 +1,14 @@
 image:
-  repository: bencuk/java-demoapp
-  tag: latest
   pullPolicy: Always
-
-replicaCount: 1
 
 service:
   targetPort: 8080
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  tls: 
+    enabled: true
+    secretName: kube-benco-io-cert

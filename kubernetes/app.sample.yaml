@@ -1,0 +1,13 @@
+#
+# See this Helm chart for options
+# https://github.com/benc-uk/helm-charts/tree/master/webapp
+#
+
+image:
+  repository: bencuk/java-demoapp
+  tag: latest
+  pullPolicy: Always
+
+service:
+  targetPort: 8080
+  type: LoadBalancer
