@@ -12,3 +12,9 @@ ingress:
   tls: 
     enabled: true
     secretName: kube-benco-io-cert
+
+# Java is SOOOOOO DAMN SLOW to start up
+livenessProbe:
+  failureThreshold: 5
+  initialDelaySeconds: 90
+  periodSeconds: 30
