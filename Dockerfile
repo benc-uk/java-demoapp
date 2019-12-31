@@ -1,7 +1,8 @@
 #
 # Compile, build and package as single 'fat' JAR with Maven
 #
-FROM openjdk:11-jdk-slim-buster AS build
+#FROM openjdk:11-jdk-slim-buster AS build
+FROM adoptopenjdk/openjdk11:alpine AS build
 
 ARG APP_VERSION=0.0.1
 
@@ -18,10 +19,9 @@ RUN mv target/java-demoapp-${APP_VERSION}.jar target/java-demoapp.jar
 # Runtime image is just JRE + the fat JAR
 #
 
-FROM openjdk:11-jre-slim-buster
+#FROM openjdk:11-jre-slim-buster
+FROM adoptopenjdk/openjdk11:alpine-jre
 
-ARG APP_VERSION=3.5.6
-ENV APP_VER=${APP_VERSION}
 WORKDIR /app
 COPY --from=build /build/target/java-demoapp.jar .
  
