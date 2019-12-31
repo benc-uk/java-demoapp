@@ -3,6 +3,7 @@ package demo.app.controllers;
 import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -31,6 +32,15 @@ public class InfoController {
         model.addAttribute("javaVendor", System.getProperties().getProperty("java.vm.name"));   
 
         Map<String, String> sortedVars = new TreeMap<String, String>(System.getenv());
+        
+        // Remove any vars which look like they might be secret
+        for(Iterator<Map.Entry<String, String>> it = sortedVars.entrySet().iterator(); it.hasNext();) {
+            String key = it.next().getKey();
+            if(key.toLowerCase().contains("secret") || key.toLowerCase().contains("pwd") || key.toLowerCase().contains("password")) {
+                it.remove();
+            }
+        }
+        
         model.addAttribute("envVars", sortedVars);
 
         return "info";
