@@ -21,7 +21,12 @@ server:
   error:
     whitelabel:
       enabled: false
+  #forward-headers-strategy: framework
+  use-forward-headers: true
 
 azure:
   activedirectory:
     active-directory-groups: Users
+
+
+
