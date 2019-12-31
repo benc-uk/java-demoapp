@@ -4,7 +4,7 @@
 #FROM openjdk:11-jdk-slim-buster AS build
 FROM adoptopenjdk/openjdk11:alpine AS build
 
-ARG APP_VERSION=0.0.1
+ARG APP_VERSION=1.0.2
 
 WORKDIR /build 
 COPY .mvn ./.mvn
