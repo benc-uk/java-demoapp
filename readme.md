@@ -4,9 +4,9 @@ This is a simple Java web app built using Spring Boot and OpenJDK 11.
 It has been designed with cloud demos & containers in mind, to demonstrate capabilities such as microservice deployment, auto scaling in Azure and Application Insights monitoring
 
 Features:
-- The *'Info'* page displays some system basic information (OS, platform, CPUs, IP address etc) and should detect if the app is running as a container or not. 
- - The *'Tools'* page is useful in demos, and has options such a forcing CPU load (for autoscale demos), and error pages for use with App Insights
- - The *'mBeans'* page is a basic Java mBeans explorer, letting you inspect mBeans registered with the JVM and the properties they are exposing
+- The **'Info'** page displays some system basic information (OS, platform, CPUs, IP address etc) and should detect if the app is running as a container or not. 
+ - The **'Tools'** page is useful in demos, and has options such a forcing CPU load (for autoscale demos), and error pages for use with App Insights
+ - The **'mBeans'** page is a basic Java mBeans explorer, letting you inspect mBeans registered with the JVM and the properties they are exposing
 - Azure AD integration for user auth and sign-in (optional, see config below)
 - Azure App Insights for monitoring (optional, see config below)
 
@@ -17,7 +17,9 @@ Features:
 * `spring_security_oauth2_client_registration_azure_clientsecret`
 * `azure_activedirectory_tenantid`
 
-## Running 
+NOTE. The Azure AD application must be registered with a reply/redirect URL which ends with `/login/oauth2/code/azure`, and implicit grant enabled
+
+## Running with Maven
 Basic:
 ```
 ./mvnw spring-boot:run
@@ -33,6 +35,13 @@ export azure_activedirectory_tenantid='my-tenant'
 ./mvnw spring-boot:run
 ```
 
+## Running with Docker
+Basic:
+```
+docker run --rm -it -p 8080:8080 bencuk/java-demoapp
+```
+
+With configuration:
 ```
 docker run --rm -it -p 8080:8080 \
 -e azure_applicationinsights_instrumentationkey="my-key" \
