@@ -4,6 +4,15 @@ image:
 service:
   targetPort: 8080
 
+secretEnv:
+  spring_security_oauth2_client_registration_azure_clientsecret:
+    secretName: java-demoapp
+    secretKey: aadAppSecret
+
+env: 
+  spring_security_oauth2_client_registration_azure_clientid: 0dd79c04-cf6f-48fd-9e49-8ba23f7e7d54
+  azure_activedirectory_tenantid: 72f988bf-86f1-41af-91ab-2d7cd011db47
+
 ingress:
   enabled: true
   annotations:
