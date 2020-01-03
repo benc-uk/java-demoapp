@@ -14,6 +14,8 @@ Features:
 - Azure AD integration for user auth and sign-in (optional, see config below)
 - Azure App Insights for monitoring (optional, see config below)
 
+![](https://user-images.githubusercontent.com/14982936/71443390-87cd0680-2702-11ea-857c-63d34a6e1306.png)
+
 ## Config - Environmental Variables
 * `PORT`
 * `azure_applicationinsights_instrumentationkey`
