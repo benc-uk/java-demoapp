@@ -57,5 +57,15 @@ docker run --rm -it -p 8080:8080 \
 bencuk/java-demoapp
 ```
 
+
+# GitHub Actions CI/CD 
+A working CI and release GitHub Actions workflow is provided `.github/workflows/build-deploy-aks.yml`, automated builds are run in GitHub hosted runners
+
+### [GitHub Actions](https://github.com/benc-uk/java-demoapp/actions)
+
+![](https://img.shields.io/github/workflow/status/benc-uk/java-demoapp/Build%20%26%20Deploy%20AKS)  
+![](https://img.shields.io/github/last-commit/benc-uk/java-demoapp)  
+
+
 # Updates
 * Dec 2019 - First version 
