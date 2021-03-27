@@ -33,3 +33,4 @@ run.sh
 **/node_modules/
 .env
 .secrets
+/tests/package*.json
