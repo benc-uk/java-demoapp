@@ -18,7 +18,16 @@ Features:
 
 ![](https://user-images.githubusercontent.com/14982936/71443390-87cd0680-2702-11ea-857c-63d34a6e1306.png)
 
-## Building & Running Locally
+# Status
+
+![](https://img.shields.io/github/last-commit/benc-uk/java-demoapp) ![](https://img.shields.io/github/release-date/benc-uk/java-demoapp) ![](https://img.shields.io/github/v/release/benc-uk/java-demoapp) ![](https://img.shields.io/github/commit-activity/y/benc-uk/java-demoapp)
+
+Live instances:
+
+[![](https://img.shields.io/website?label=Hosted%3A%20Azure%20App%20Service&up_message=online&url=https%3A%2F%2Fjava-demoapp.azurewebsites.net%2F)](https://java-demoapp.azurewebsites.net/)  
+[![](https://img.shields.io/website?label=Hosted%3A%20Kubernetes&up_message=online&url=https%3A%2F%2Fjava-demoapp.kube.benco.io%2F)](https://java-demoapp.kube.benco.io/)
+
+# Building & Running Locally
 
 ### Pre-reqs
 
