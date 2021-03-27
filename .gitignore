@@ -25,8 +25,11 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
+
 
 ### VS Code ###
 #.vscode/
 run.sh
+**/node_modules/
+.env
+.secrets

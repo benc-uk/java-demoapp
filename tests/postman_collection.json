@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "abd174da-7ff5-416e-8d17-dcf98fc3ffde",
+		"name": "Java Demoapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check Home Page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Home Page: Successful GET request\", function () {",
+							"    pm.response.to.be.ok;",
+							"});",
+							"",
+							"pm.test(\"Home Page: Response valid & HTML body\", function () {",
+							"    pm.response.to.be.withBody;",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.contain('text/html');",
+							"});",
+							"",
+							"pm.test(\"Home Page: Check content\", function () {",
+							"    pm.expect(pm.response.text()).to.include('Spring');",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{apphost}}/",
+					"protocol": "http",
+					"host": [
+						"{{apphost}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Info Page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Info Page: Successful GET request\", function () {",
+							"    pm.response.to.be.ok;",
+							"});",
+							"",
+							"pm.test(\"Info Page: Response valid & HTML body\", function () {",
+							"    pm.response.to.be.withBody;",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.contain('text/html');",
+							"});",
+							"",
+							"pm.test(\"Info Page: Check content\", function () {",
+							"    pm.expect(pm.response.text()).to.include('Java Version');",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{apphost}}/info",
+					"protocol": "http",
+					"host": [
+						"{{apphost}}"
+					],
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check MBeans",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"mBeans: Successful GET request\", function () {",
+							"    pm.response.to.be.ok;",
+							"});",
+							"",
+							"pm.test(\"mBeans: Response valid & JSON body\", function () {",
+							"    pm.response.to.be.withBody;",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.contain('text/html');",
+							"});",
+							"",
+							"pm.test(\"mBeans: Check API response\", function () {",
+							"    pm.expect(pm.response.text()).to.include('java.lang:type=OperatingSystem');",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{apphost}}/mbeans",
+					"protocol": "http",
+					"host": [
+						"{{apphost}}"
+					],
+					"path": [
+						"mbeans"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,23 +1,25 @@
 image:
+  repository: ghcr.io/benc-uk/java-demoapp
   pullPolicy: Always
 
 service:
   targetPort: 8080
 
 secretEnv:
-  spring_security_oauth2_client_registration_azure_clientsecret:
+  azure_activedirectory_clientsecret:
     secretName: java-demoapp
     secretKey: aadAppSecret
 
-env: 
-  spring_security_oauth2_client_registration_azure_clientid: 0dd79c04-cf6f-48fd-9e49-8ba23f7e7d54
-  azure_activedirectory_tenantid: 72f988bf-86f1-41af-91ab-2d7cd011db47
+env:
+  azure_activedirectory_clientid: cfc68d9c-bc27-4a18-88c0-63b4438d4f37
+  azure_activedirectory_tenantid: 29397eda-722a-44c7-b69c-38e4da1d4f76
 
 ingress:
   enabled: true
+  host: java-demoapp.kube.benco.io
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-  tls: 
+  tls:
     enabled: true
     secretName: kube-benco-io-cert
 

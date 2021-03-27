@@ -1,4 +1,8 @@
 {
   "java.configuration.updateBuildConfiguration": "automatic",
-  "java.dependency.syncWithFolderExplorer": true
+  "editor.semanticHighlighting.enabled": true,
+  "java.checkstyle.configuration": "${workspaceFolder}/check-style.xml",
+  "java.refactor.renameFromFileExplorer": "preview",
+  "java.checkstyle.version": "8.29",
+  "java.checkstyle.modules": []
 }
