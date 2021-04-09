@@ -1,0 +1,16 @@
+{
+  "image": "ghcr.io/benc-uk/devcontainers/java:latest",
+  "remoteUser": "vscode",
+  "forwardPorts": [8080],
+
+  "extensions": [
+    "redhat.java",
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml",
+    "vscjava.vscode-maven",
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-bicep",
+    "cschleiden.vscode-github-actions",
+    "github.vscode-pull-request-github"
+  ]
+}
