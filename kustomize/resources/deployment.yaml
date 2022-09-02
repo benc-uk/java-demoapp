@@ -15,7 +15,7 @@ spec:
         app: demo-java-app
     spec:
       containers:
-        - image: renovatetalkacr.azurecr.io/renovate-talk-demo-app
+        - image: renovatetalkacr.azurecr.io/renovate-talk-java-demo-app
           name: demo-java-app
           resources:
             requests:
