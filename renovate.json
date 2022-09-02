@@ -3,5 +3,6 @@
   "includeForks": true,
   "extends": [
     ":semanticCommitTypeAll(fix)"
-  ]
+  ],
+  "prConcurrentLimit": 2
 }
