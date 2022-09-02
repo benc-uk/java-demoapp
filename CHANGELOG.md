@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.2.2...v1.3.0) (2022-09-02)
+
+
+### Features
+
+* enable ha ([8700569](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/870056995707ccdb0df45729562561ec5fdec149))
+
 ## [1.2.2](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.2.1...v1.2.2) (2022-09-02)
 
 
