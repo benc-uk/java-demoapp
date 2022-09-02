@@ -1,0 +1,21 @@
+# Global plugin options (will be passed to all plugins)
+preset: "conventionalcommits"
+branches:
+  - "+([0-9])?(.{+([0-9]),x}).x"
+  - "main"
+  - "next"
+  - "next-major"
+  - name: "beta"
+    prerelease: true
+  - name: "alpha"
+    prerelease: true
+plugins:
+  - path: "@semantic-release/commit-analyzer"
+  - path: "@semantic-release/release-notes-generator"
+  - path: "@semantic-release/changelog"
+  - path: "@semantic-release/exec"
+    prepareCmd: "sh set_kustomize_image.sh ${nextRelease.version}"
+  - path: "@semantic-release/git"
+    assets:
+      - CHANGELOG.md
+      # - README.md

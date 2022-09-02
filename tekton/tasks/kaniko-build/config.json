@@ -1,0 +1,5 @@
+{
+    "credHelpers": {
+        "renovatetalkacr.azurecr.io": "acr-env"
+    }
+}

@@ -1,0 +1,50 @@
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: semantic-versioning
+  labels:
+    app.kubernetes.io/version: "0.1"
+  annotations:
+    tekton.dev/displayName: "semantic versioning"
+spec:
+  workspaces:
+    - name: source
+      description: A workspace that contains the fetched git repository.
+  params:
+    - name: revision
+      description: branch name. Used in case of non-release build
+      type: string
+
+    - name: image_repository
+      description: name of the image repository used
+      type: string
+  results:
+    - name: version
+      description: The calculated version
+  steps:
+    - name: semantic-versioning
+      image: pietervincken/semanticversioning:0.0.4
+      workingDir: $(workspaces.source.path)
+      script: |
+        #!/usr/bin/env sh
+        set -eu
+
+        cat << EOF > set_kustomize_image.sh
+        #!/bin/bash
+        echo -n \$1 > VERSION
+
+        cd kustomize
+        kustomize edit set image $(params.image_repository):\$1
+        EOF
+
+        npx semantic-release --no-ci
+
+        if [ -f "VERSION" ];then
+          echo "Found released version"
+          cat VERSION
+          cat VERSION | tee "$(results.version.path)"
+        else
+          echo "Didn't find version, reverting to branch name."
+          echo -n "$(params.revision)" | tee "$(results.version.path)"
+        fi

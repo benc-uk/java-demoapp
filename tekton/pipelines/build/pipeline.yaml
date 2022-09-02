@@ -1,0 +1,57 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: build
+spec:
+  params:
+    - name: git-url
+    - name: git-revision
+    - name: git-repository-name
+    - name: git-push-user-email
+    - name: registry
+      default: renovatetalkacr.azurecr.io
+  workspaces:
+    - name: workspace
+  tasks:
+    - name: clone
+      taskRef:
+        name: git-clone
+      params:
+        - name: url
+          value: $(params.git-url)
+        - name: revision
+          value: $(params.git-revision)
+        - name: depth
+          value: "1"
+      workspaces:
+        - name: output
+          workspace: workspace
+          subPath: source
+
+    - name: semantic-versioning
+      taskRef:
+        name: semantic-versioning
+      runAfter:
+        - clone
+      params:
+        - name: revision
+          value: $(params.git-revision)
+        - name: image_repository
+          value: $(params.registry)/$(params.git-repository-name)
+      workspaces:
+        - name: source
+          workspace: workspace
+          subPath: source
+
+    - name: build-and-push
+      taskRef:
+        name: kaniko-build
+      runAfter:
+        - semantic-versioning
+      params:
+        - name: IMAGE
+          value: $(params.registry)/$(params.git-repository-name):$(tasks.semantic-versioning.results.version)
+      workspaces:
+        - name: source
+          workspace: workspace
+          subPath: source

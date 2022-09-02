@@ -6,7 +6,7 @@ FROM adoptopenjdk/openjdk16:alpine AS build
 ARG APP_VERSION=2.1.7
 
 LABEL Name="Java SpringBoot Demo App" Version=2.1.7
-LABEL org.opencontainers.image.source = "https://github.com/benc-uk/java-demoapp"
+LABEL org.opencontainers.image.source = "https://github.com/pietervincken/renovate-talk-java-demo-app.git"
 
 WORKDIR /build 
 COPY .mvn ./.mvn
@@ -25,6 +25,6 @@ FROM adoptopenjdk/openjdk16:alpine-jre
 
 WORKDIR /app
 COPY --from=build /build/target/java-demoapp.jar .
- 
+
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "java-demoapp.jar"]

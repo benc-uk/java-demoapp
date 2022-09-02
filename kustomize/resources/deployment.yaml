@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-java-app
+  name: demo-java-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-java-app
+  template:
+    metadata:
+      labels:
+        app: demo-java-app
+    spec:
+      containers:
+        - image: renovatetalkacr.azurecr.io/renovate-talk-demo-app
+          name: demo-java-app
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          ports:
+            - containerPort: 8080
+              name: http
