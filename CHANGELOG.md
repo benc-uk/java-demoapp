@@ -1,3 +1,17 @@
+## [1.2.2](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.2.1...v1.2.2) (2022-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency com.microsoft.azure:applicationinsights-core to v2.6.4 ([515ea24](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/515ea24aada1b3c650f1bcbc30f32999b8ed6eb2))
+
+## [1.2.1](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.2.0...v1.2.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* add new pr limit for renovate ([2af0120](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/2af0120f4a93a35c09e62e3105709a340f49a2e8))
+
 ## [1.2.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.1.0...v1.2.0) (2022-09-02)
 
 
