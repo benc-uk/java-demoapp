@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.2.0...v1.2.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* add new pr limit for renovate ([2af0120](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/2af0120f4a93a35c09e62e3105709a340f49a2e8))
+
 ## [1.2.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.1.0...v1.2.0) (2022-09-02)
 
 
