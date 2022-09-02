@@ -18,4 +18,4 @@ plugins:
   - path: "@semantic-release/git"
     assets:
       - CHANGELOG.md
-      # - README.md
+      - kustomize/kustomization.yaml
