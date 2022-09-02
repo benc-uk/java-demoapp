@@ -51,6 +51,9 @@ spec:
       params:
         - name: IMAGE
           value: $(params.registry)/$(params.git-repository-name):$(tasks.semantic-versioning.results.version)
+        - name: EXTRA_ARGS
+          value:
+            - --build-arg=APP_VERSION=$(tasks.semantic-versioning.results.version)
       workspaces:
         - name: source
           workspace: workspace
