@@ -27,3 +27,11 @@ spec:
           ports:
             - containerPort: 8080
               name: http
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
