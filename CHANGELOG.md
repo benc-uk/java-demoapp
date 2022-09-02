@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.1.0...v1.2.0) (2022-09-02)
+
+
+### Features
+
+* add probes and override renovate commit structure ([b8cc92f](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/b8cc92f4bc89eb9a975eab215f6bda925be6ed6b))
+
 ## [1.1.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.0.1...v1.1.0) (2022-09-02)
 
 
