@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.0.1...v1.1.0) (2022-09-02)
+
+
+### Features
+
+* add proper support for versioning ([64ef9aa](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/64ef9aaa4b3d036d05d54d118810dd937a6c78e0))
+
 ## [1.0.1](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.0.0...v1.0.1) (2022-09-02)
 
 
