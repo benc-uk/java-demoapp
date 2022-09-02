@@ -28,3 +28,4 @@ COPY --from=build /build/target/java-demoapp.jar .
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "java-demoapp.jar"]
+
