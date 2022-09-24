@@ -13,6 +13,8 @@ plugins:
   - path: "@semantic-release/commit-analyzer"
   - path: "@semantic-release/release-notes-generator"
   - path: "@semantic-release/changelog"
+  - path: "@semantic-release/exec"
+    prepareCmd: "sh set_version.sh ${nextRelease.version}"
   - path: "@semantic-release/git"
     assets:
       - CHANGELOG.md

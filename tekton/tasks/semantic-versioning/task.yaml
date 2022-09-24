@@ -30,12 +30,9 @@ spec:
         #!/usr/bin/env sh
         set -eu
 
-        cat << EOF > set_kustomize_image.sh
+        cat << EOF > set_version.sh
         #!/bin/bash
         echo -n \$1 > VERSION
-
-        cd kustomize
-        kustomize edit set image $(params.image_repository):\$1
         EOF
 
         npx semantic-release --no-ci
