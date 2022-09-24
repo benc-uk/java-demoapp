@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.3.0...v1.4.0) (2022-09-24)
+
+
+### Features
+
+* remove deployment configuration ([c24cc27](https://github.com/pietervincken/renovate-talk-java-demo-app/commit/c24cc27368e6b31503b7f908194bdf7b9e7727e1))
+
 ## [1.3.0](https://github.com/pietervincken/renovate-talk-java-demo-app/compare/v1.2.2...v1.3.0) (2022-09-02)
 
 
